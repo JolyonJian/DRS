@@ -2,7 +2,7 @@
 A Deep Reinforcement Learning enhanced Kubernetes Scheduler for Microservice-based System
 
 ## File description
-- `kubernetes/` : The source code of [Kubernetes (version 1.23.4)](https://github.com/kubernetes/kubernetes/tree/v1.23.4). The DRS scheduler is in registed in `kubernetes/pkg/scheduler/framework/plugins/dqn/dqn.go`
+- `scheduler/` : The source code of kube-scheduler for [Kubernetes (version 1.23.4)](https://github.com/kubernetes/kubernetes/tree/v1.23.4). The DRS scheduler is in registed in `scheduler/framework/plugins/dqn/dqn.go`
 - `deploy/` :
     - `apps/` : the application configure file and deploy script.
 
@@ -15,8 +15,8 @@ A Deep Reinforcement Learning enhanced Kubernetes Scheduler for Microservice-bas
     | Data Write | IO-intensive | Read a file on the disk and write a copy | [jolyonjian/apps:io-1.0](https://hub.docker.com/repository/docker/jolyonjian/apps) |
 
     - `scripts/` : Scripts for cluster creation, initialization, deletion, etc.
-- `scheduler/` : DRS scheduler runs on the master node of the k8s cluster
-- `monitor/` : DRS monitor runs on the worker node of the k8s cluster
+- `drs-scheduler/` : DRS scheduler runs on the master node of the k8s cluster
+- `drs-monitor/` : DRS monitor runs on the worker node of the k8s cluster
 
 ## Run
 1. Modify the source code of [Kubernetes (version 1.23.4)](https://github.com/kubernetes/kubernetes/tree/v1.23.4) to regist DRS scheduler and compile the project.
