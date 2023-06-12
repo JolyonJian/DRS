@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-disk
+spec:
+  schedulerName: my-scheduler
+  nodeName: node1
+  containers:
+  - name: app-disk
+    image: jolyonjian/apps:io-1.0
+    command: ["/workspace/run.sh"]
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+  restartPolicy: OnFailure
