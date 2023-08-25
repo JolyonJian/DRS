@@ -141,10 +141,6 @@ spec:
 
       serviceAccountName: my-scheduler
 
-      nodeSelector:
-
-        myscheduler: myscheduler
-
       containers:
 
       - command:
